@@ -19,7 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dtos\" />
+    <ProjectReference Include="..\Book.Application\Book.Application.csproj" />
   </ItemGroup>
 
 </Project>
