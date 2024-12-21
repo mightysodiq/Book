@@ -11,11 +11,11 @@ namespace Book.Api.Controllers
             this.bookServices = bookServices;
         }
 
-        [HttpGet("search")]
-        public async Task<IActionResult>SearchBooks(string title)
-        {
-            var result = await bookServices.SearchBookAsync(title);
-            return Ok(result);
-        }
+        //[HttpGet("search")]
+        //public async Task<IActionResult>SearchBooks(string title)
+        //{
+        //    var result = await bookServices.SearchBookAsync(title);
+        //    return Ok(result);
+        //}
     }
 }
