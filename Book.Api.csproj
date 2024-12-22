@@ -22,8 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Book.Application\Book.Application.csproj" />
-    <ProjectReference Include="..\Book.Core\Book.Core.csproj" />
     <ProjectReference Include="..\Book.Infrastructure\Book.Infrastructure.csproj" />
   </ItemGroup>
 

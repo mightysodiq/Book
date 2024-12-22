@@ -17,13 +17,13 @@ namespace Book.Api.Controllers
         {
             Connection = config.GetValue<string>("ConnectionString");
         }
-        [HttpGet]
+        [HttpPost]
         [Route("Create")]
         public IActionResult Create(CreateUserDto user)
         {
-            string sql = "INSER INTO USERS VALUES (@username,@password,@Email,null)";
+            string sql = "INSERT INTO USERS VALUES (@username,@password,@Email,null)";
             using (var db = new SqlConnection(Connection))
-            {
+            { 
                 db.Execute(sql, user);
             }
             return StatusCode(Convert.ToInt32(HttpStatusCode.OK), new { User = user });
@@ -60,10 +60,11 @@ namespace Book.Api.Controllers
                 string sql = "DELETE USERS where id=@userId)";
                 using (var db = new SqlConnection(Connection))
                 {
-                    db.Execute(sql, new { userId });
+                    db.Execute(sql, new { userId }); 
                 }
-                return StatusCode(Convert.ToInt32(HttpStatusCode.OK), new { Message = "Sucess" });
+                return StatusCode(Convert.ToInt32(HttpStatusCode.OK), new { Message = "Success" });
         }
+        
 
     }   
 }
