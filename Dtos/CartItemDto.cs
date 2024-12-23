@@ -8,6 +8,6 @@
         public string Author { get; set; }
         public decimal price { get; set; }
         public int Quantity { get; set; }
-        public decimal TotalPrice => price * Quantity;
+        public decimal TotalPrice {  get; set; }
     }
 }

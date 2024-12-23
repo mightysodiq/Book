@@ -7,7 +7,7 @@
         public DateTime OrderDate { get; set; }
         public string CustomerName { get; set; }
         public string CustomerEmail { get; set; }
-        public IEnumerable<CartItemDto> items { get; set; }
+        public IEnumerable<CartItemDto> Items { get; set; }
         public decimal TotalAmount { get; set; }
         public string Status { get; set; }
         public String PaymentMethod { get; set; }
